@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login Register App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/main.css">
+	
+
+</head>
+<body>
+
+<div class="container">
+
+<center>
+	<h3>CPU Usage And Performance</h3>
+				<table class="table table-bordered table-striped text-center ">
+					<thead>
+				      <tr>
+				        <th>Process Id</th>
+				        <th>Name</th>
+				        <th>CPU</th>
+				        <th>Mem(virtual)</th>
+				        <th>Usage(%)</th>
+				      </tr>
+  			     </thead>
+  			     
+  			     	
+  			     	<% top8.forEach((topp) =>{%>
+  			     	<tbody>
+  			     	 <tr>
+				        <td><%=topp.pid%></td>
+				        <td><%=topp.name%></td>
+				        <td><%=topp.cpu%></td>
+				        <td><%=topp.mem.virtual%></td>
+				        <td><%=topp.mem.usage%></td>
+				      </tr>  
+
+  			     	<%})%>
+
+
+  			     </tbody>
+				</table>
+			</center>
+
+
+</div>
+</body>
+
+</html>
